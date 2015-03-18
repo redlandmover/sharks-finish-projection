@@ -55,7 +55,7 @@ get '/' do
 
   ap worst_teams
 
-  return "The sharks can finish a minimum of " + ActiveSupport::Inflector.ordinalize(worst_teams.count+1) +
+  return "With " + sharks[:games_left] + " games remaining, the sharks can finish a minimum of " + ActiveSupport::Inflector.ordinalize(worst_teams.count+1) +
     " and have a " + percentages[(worst_teams.count)].to_s + ' % chance at McDavid'
 
 end
